@@ -330,6 +330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b0a914098e9f8c4b98e4c2ad594a45e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHitPoint: 20
+  hitPoint: 0
   playerCamera: {fileID: 556133204}
   walkingSpeed: 7.5
   runningSpeed: 15
@@ -1801,7 +1803,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1831915887}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0.12, z: 0.79}
+  m_LocalPosition: {x: 0.4, y: -0.3, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
