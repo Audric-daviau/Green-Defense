@@ -83,7 +83,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &8509816854470822276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 8509816855539026141}
   - component: {fileID: 8509816855539026140}
   m_Layer: 0
-  m_Name: Forground
+  m_Name: HealthBar
   m_TagString: HPBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -191,7 +191,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hp: 50
-  _hpmax: 50
 --- !u!1 &8509816855749146547
 GameObject:
   m_ObjectHideFlags: 0
