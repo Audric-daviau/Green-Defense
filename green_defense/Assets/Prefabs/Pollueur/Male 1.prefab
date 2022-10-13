@@ -392,6 +392,7 @@ GameObject:
   - component: {fileID: -5078760348152720409}
   - component: {fileID: -2818054678961238378}
   - component: {fileID: 1929696495217874746}
+  - component: {fileID: 2867097173974042102}
   m_Layer: 0
   m_Name: Male 1
   m_TagString: Untagged
@@ -500,6 +501,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hb: {fileID: 8250571408125928353}
   moveSpeed: 2
+--- !u!114 &2867097173974042102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7019088425620113033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e10ff0391cd9947be72f56960ba5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnBullet: {fileID: 0}
+  bullet: {fileID: 6081935136898350111, guid: 12b8e7146cf1feb498f55f1ce7405a4d, type: 3}
+  shootSpeed: 7.9
+  timeToShoot: 0.75
 --- !u!1 &7019088425620113035
 GameObject:
   m_ObjectHideFlags: 0
