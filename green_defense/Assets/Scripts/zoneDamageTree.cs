@@ -17,7 +17,7 @@ public class zoneDamageTree : MonoBehaviour
     {
         if (isEnemy)
         {
-            Debug.Log("un enemy !");
+            //Todo
         }
     }
     void OnTriggerEnter(Collider other)
