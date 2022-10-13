@@ -7,11 +7,17 @@ public class AnimationStateController : MonoBehaviour
     public HealthBar hb;
 
     private bool isTreeDetect;
+    private bool isPlayer;
     public float moveSpeed;
     Transform treeTransform;
     Animator animator;
     Rigidbody rb;
     int dommage = 10 ;
+
+    public bool getIsPlayer()
+    {
+        return isPlayer;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -31,9 +37,19 @@ public class AnimationStateController : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Tree")){
+        if (other.CompareTag("Player"))
+        {
+            isPlayer = true;
+        }
+
+        else if (other.CompareTag("Tree")){
             isTreeDetect = true;
             treeTransform = other.transform;
+        }
+        else
+        {
+            isPlayer = false;
+            isTreeDetect = false;
         }
     }
 
@@ -47,6 +63,13 @@ public class AnimationStateController : MonoBehaviour
     void DetecteZone() //Détecte si les personnages rentre dans la zone de converssion de l'arbre
     {
         bool isTree = animator.GetBool("isTree");
+        if (isPlayer)
+        {
+            animator.SetBool("isTree", true);
+            transform.position += transform.forward * 0 * Time.deltaTime;
+            transform.LookAt(treeTransform);
+        }
+
         if (isTreeDetect)
         {
             animator.SetBool("isTree", true);
@@ -57,7 +80,7 @@ public class AnimationStateController : MonoBehaviour
 
         }
 
-        if (!isTreeDetect)
+        if (!isTreeDetect && !isPlayer)
         {
             animator.SetBool("isTree", false);
             transform.position += transform.forward * moveSpeed * Time.deltaTime;

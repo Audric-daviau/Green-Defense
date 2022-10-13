@@ -7,6 +7,8 @@ TagManager:
   - Tree
   - Enemy
   - Terrain
+  - HPBar
+  - Seed
   layers:
   - Default
   - TransparentFX
