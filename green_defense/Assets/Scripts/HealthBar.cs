@@ -11,14 +11,14 @@ public class HealthBar : MonoBehaviour
     private float _hpmax = 50;
     private Image healthbar;
 
-    float coef = 5.0f ;
+    float coef = 5.0f;
 
     public float getHp()
     {
-        return _hp ;
+        return _hp;
     }
 
-    public void setCurrentHP(const float hp)
+    public void setCurrentHP(float hp)
     {
         _hp = hp;
     }
