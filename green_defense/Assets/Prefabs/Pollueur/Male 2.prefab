@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2128859291651834919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7987576295826917298}
+  m_Layer: 0
+  m_Name: Tir
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7987576295826917298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128859291651834919}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.3, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2369712856593335393}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2369712856593307681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,7 +1955,7 @@ GameObject:
   - component: {fileID: -3191025072958167525}
   - component: {fileID: 6511283732707574256}
   - component: {fileID: -3255925429633973418}
-  - component: {fileID: -1403327731044358513}
+  - component: {fileID: -7246188179981861413}
   m_Layer: 0
   m_Name: Male 2
   m_TagString: Untagged
@@ -1954,6 +1985,7 @@ Transform:
   - {fileID: 2369712856593335405}
   - {fileID: 2369712856593335407}
   - {fileID: 2369712856593335401}
+  - {fileID: 7987576295826917298}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2033,7 +2065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hb: {fileID: 6368620929239139196}
   moveSpeed: 2
---- !u!114 &-1403327731044358513
+--- !u!114 &-7246188179981861413
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2045,8 +2077,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e10ff0391cd9947be72f56960ba5db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnBullet: {fileID: 0}
-  bullet: {fileID: 6081935136898350111, guid: 12b8e7146cf1feb498f55f1ce7405a4d, type: 3}
+  spawnBullet: {fileID: 7987576295826917298}
+  bullet: {fileID: 6918467608218448975, guid: 34b748d53ba61cd4283a06d177f2e536, type: 3}
   shootSpeed: 7.9
   timeToShoot: 0.75
 --- !u!1 &2369712856593308035
