@@ -1293,32 +1293,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197639332}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1391752992 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6103262681899122112, guid: fcabbf6dce97b4143895e121697800f1, type: 3}
-  m_PrefabInstance: {fileID: 796904649}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1391752998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6103262681898754528, guid: fcabbf6dce97b4143895e121697800f1, type: 3}
   m_PrefabInstance: {fileID: 796904649}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1391752999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391752992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29e10ff0391cd9947be72f56960ba5db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnBullet: {fileID: 1600500925}
-  bullet: {fileID: 6918467608218448975, guid: 34b748d53ba61cd4283a06d177f2e536, type: 3}
-  shootSpeed: 30
-  timeToShoot: 0.75
 --- !u!1 &1432393806
 GameObject:
   m_ObjectHideFlags: 0
