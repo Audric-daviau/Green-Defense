@@ -81,7 +81,7 @@ MonoBehaviour:
   - {fileID: 1577362923990514326, guid: 3ef454cc035adc1489a9aec1f5a10d55, type: 3}
   - {fileID: 7019088425620113033, guid: 5da73550c90a266498e0fcd9c6437148, type: 3}
   - {fileID: 6562031803846321546, guid: 619f88d1e87438a43a166f80364f0fd4, type: 3}
-  nbMaxPeople: 30
-  nbMinPeople: 20
+  nbMaxPeople: 5
+  nbMinPeople: 5
   center: {fileID: 8065274655188021380}
-  size: {x: 10, y: 10, z: 10}
+  size: {x: 5, y: 5, z: 5}
