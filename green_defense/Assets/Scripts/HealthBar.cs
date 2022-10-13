@@ -7,11 +7,21 @@ using Image=UnityEngine.UI.Image;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField]
-    private int hp;
-    
-    [SerializeField]
-    private int hpmax;
+    private float _hp = 50;
+    private float _hpmax = 50;
     private Image healthbar;
+
+    float coef = 5.0f;
+
+    public float getHp()
+    {
+        return _hp;
+    }
+
+    public void setCurrentHP(float hp)
+    {
+        _hp = hp;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -19,17 +29,17 @@ public class HealthBar : MonoBehaviour
         healthbar = GetComponent<Image>();
     }
 
-    public void TakeDamage(int damages)
+    public void TakeDamage()
     {
-        hp -= damages;
+        _hp -= coef * Time.deltaTime ;
         UpdateHealth();
     }
 
-    // Actualise les points de vie pour rester entre 0 et hpmax
+    // Actualise les points de vie pour rester entre 0 et _hpmax
     public void UpdateHealth()
     {
-        hp = Mathf.Clamp(hp, 0, hpmax);
-        float amount = (float)hp / hpmax;
+        _hp = Mathf.Clamp(_hp, 0, _hpmax);
+        float amount = (float)_hp / _hpmax;
         healthbar.fillAmount = amount;
     }
 }
