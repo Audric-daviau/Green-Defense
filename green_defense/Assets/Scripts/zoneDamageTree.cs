@@ -17,21 +17,14 @@ public class zoneDamageTree : MonoBehaviour
     {
         if (isEnemy)
         {
-            Console.WriteLine("un enemy !");
+            Debug.Log("un enemy !");
         }
     }
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
             isEnemy = true;
-        }
-    }
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Tree"))
-        {
-            isEnemy = false;
         }
     }
 
