@@ -1519,7 +1519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e54d08d259d6b34e80a8129206252d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hb: {fileID: 6074396447961386494}
+  lifeBar: {fileID: 6074396447961386494}
   moveSpeed: 2
 --- !u!114 &5931831254816754305
 MonoBehaviour:
