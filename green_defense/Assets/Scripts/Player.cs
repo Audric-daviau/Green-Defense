@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    // Vie Player
+    public int maxHitPoint = 20;
+
+    // Points de Vie actuels
+    public int hitPoint = 0;
+
     //Camera
     public Camera playerCamera;
  
@@ -40,6 +46,8 @@ public class Player : MonoBehaviour
         //Cache le curseur de la souris
         Cursor.visible = false;
         characterController = GetComponent<CharacterController>();  
+        //Au début : Points de vie actuels = Maximum de points de vie | NOMBRE DE GRAINES?
+        hitPoint = maxHitPoint;
     }
  
     // Update is called once per frame
@@ -64,7 +72,7 @@ public class Player : MonoBehaviour
  
  
         //Est-ce qu'on appuie sur le bouton pour courir (ici : Shift Gauche) ?
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetButton("Fire3"))
         {
             //En train de courir
             isRunning = true;
@@ -97,7 +105,7 @@ public class Player : MonoBehaviour
         moveDirection = forward * speedZ + right * speedX;
  
         
-        // Est-ce qu'on appuie sur le bouton de saut (ici : Espace)
+        // Est-ce qu'on appuie sur le bouton de saut (ici : Espace / B(manette))
         if (Input.GetButton("Jump") && characterController.isGrounded)
         {
  
