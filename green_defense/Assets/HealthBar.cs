@@ -7,10 +7,10 @@ using Image=UnityEngine.UI.Image;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField]
-    private int hp;
+    private int _hp = 50;
     
     [SerializeField]
-    private int hpmax;
+    private int _hpmax = 50;
     private Image healthbar;
 
     // Start is called before the first frame update
@@ -21,15 +21,15 @@ public class HealthBar : MonoBehaviour
 
     public void TakeDamage(int damages)
     {
-        hp -= damages;
+        _hp -= damages;
         UpdateHealth();
     }
 
-    // Actualise les points de vie pour rester entre 0 et hpmax
+    // Actualise les points de vie pour rester entre 0 et _hpmax
     public void UpdateHealth()
     {
-        hp = Mathf.Clamp(hp, 0, hpmax);
-        float amount = (float)hp / hpmax;
+        _hp = Mathf.Clamp(_hp, 0, _hpmax);
+        float amount = (float)_hp / _hpmax;
         healthbar.fillAmount = amount;
     }
 }
