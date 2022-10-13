@@ -1980,7 +1980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnBullet: {fileID: 5248342216322770597}
-  bullet: {fileID: 6918467608218448975, guid: 34b748d53ba61cd4283a06d177f2e536, type: 3}
+  bullet: {fileID: 4115989556732079227, guid: 7271c62891c2e214089399af51532907, type: 3}
   shootSpeed: 7.9
   timeToShoot: 0.75
 --- !u!1 &6103262681899122114
