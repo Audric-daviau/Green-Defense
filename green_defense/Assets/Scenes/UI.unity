@@ -17975,9 +17975,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 270474452257686258, guid: f95d958caec721b4f99e76ed9344519e, type: 3}
+      propertyPath: m_text
+      value: 'Score: '
+      objectReference: {fileID: 0}
+    - target: {fileID: 270474452257686258, guid: f95d958caec721b4f99e76ed9344519e, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1678931745615817554, guid: f95d958caec721b4f99e76ed9344519e, type: 3}
       propertyPath: m_Name
       value: UI Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5525517603195045528, guid: f95d958caec721b4f99e76ed9344519e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 824
       objectReference: {fileID: 0}
     - target: {fileID: 6307283743480731833, guid: f95d958caec721b4f99e76ed9344519e, type: 3}
       propertyPath: m_Pivot.x

@@ -2568,6 +2568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hb: {fileID: 6089901357437524853}
+  player: {fileID: 1181416913837315682, guid: ac5bef01ac6ad0d4981beaefc841503e, type: 3}
   moveSpeed: 2
 --- !u!114 &-4072071963850624024
 MonoBehaviour:
