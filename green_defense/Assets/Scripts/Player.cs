@@ -10,9 +10,6 @@ public class Player : MonoBehaviour
     // Points de Vie actuels
     public int hitPoint = 0;
 
-    // Score player
-    private int score = 0;
-
     //Camera
     public Camera playerCamera;
  
@@ -153,15 +150,5 @@ public class Player : MonoBehaviour
         //Input.GetAxis("Mouse X") = mouvement de la souris gauche/droite
         //Applique la rotation gauche/droite sur le Player
         transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * rotationSpeed, 0);
-    }
-
-    public void setScore(int sc)
-    {
-        score = sc;
-    }
-    
-    public int getScore()
-    {
-        return score;
     }
 }
