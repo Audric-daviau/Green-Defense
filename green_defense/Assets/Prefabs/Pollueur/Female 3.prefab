@@ -1397,6 +1397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e54d08d259d6b34e80a8129206252d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1181416913837315682, guid: ac5bef01ac6ad0d4981beaefc841503e, type: 3}
   hb: {fileID: 7086047486565271928}
   moveSpeed: 2
 --- !u!114 &-2303016865797134354
@@ -2965,6 +2966,10 @@ PrefabInstance:
     - target: {fileID: 4589575479019605867, guid: 3ef454cc035adc1489a9aec1f5a10d55, type: 3}
       propertyPath: m_Constraints
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954251964653453498, guid: 3ef454cc035adc1489a9aec1f5a10d55, type: 3}
+      propertyPath: player
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ef454cc035adc1489a9aec1f5a10d55, type: 3}

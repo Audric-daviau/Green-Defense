@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AnimationStateController : MonoBehaviour
 {
+    public Player player;
     public HealthBar hb;
 
     private bool isTreeDetect;
@@ -13,18 +14,10 @@ public class AnimationStateController : MonoBehaviour
     Transform person;
     Animator animator;
     Rigidbody rb;
-    int dommage = 10 ;
-
-    private int nbr_convert = 0;
 
     public bool getIsPlayer()
     {
         return isPlayer;
-    }
-
-    public int getNrb_convert()
-    {
-        return nbr_convert;
     }
 
     // Start is called before the first frame update
@@ -39,7 +32,7 @@ public class AnimationStateController : MonoBehaviour
     { 
         DetecteZone() ;
         if(hb.getHp() == 0){
-            nbr_convert++;
+            player.setScore(player.getScore() + 1);
             Destroy(this.gameObject);
         }
     }
