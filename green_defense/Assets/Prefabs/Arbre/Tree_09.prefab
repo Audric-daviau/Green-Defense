@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeBar: {fileID: 547853604447651893}
+  seed: {fileID: 2480803854208027529, guid: 993f3b7cdcdb1f242b6be05636f79aa8, type: 3}
 --- !u!1001 &8179289695781126377
 PrefabInstance:
   m_ObjectHideFlags: 0

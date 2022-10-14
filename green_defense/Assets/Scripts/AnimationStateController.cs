@@ -5,7 +5,8 @@ using UnityEngine;
 public class AnimationStateController : MonoBehaviour
 {
     public HealthBar hb;
-
+    private GameObject tds;
+    private bool isDestroyed;
     private bool isTreeDetect;
     private bool isPlayer;
     public float moveSpeed;
@@ -41,10 +42,16 @@ public class AnimationStateController : MonoBehaviour
             nbr_convert++;
             Destroy(this.gameObject);
         }
+        if (tds.GetComponent<treeDamage>().isDestroy)
+        {
+            isTreeDetect = false;
+            transform.position += transform.forward * moveSpeed * Time.deltaTime;
+        }
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
+
         if (other.CompareTag("Player"))
         {
             isPlayer = true;
@@ -54,7 +61,9 @@ public class AnimationStateController : MonoBehaviour
         else if (other.CompareTag("Tree")){
             isTreeDetect = true;
             treeTransform = other.transform;
+            tds = other.gameObject;
         }
+        
     }
 
     void OnTriggerExit(Collider other)
@@ -97,6 +106,7 @@ public class AnimationStateController : MonoBehaviour
         }
         else
         {
+            isTreeDetect = false;
             animator.SetBool("isTree", false);
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
