@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Projectil: {fileID: 1935476892860558584, guid: 302c49ac4cc9da14cad87c6d880998fe, type: 3}
+  sp: {fileID: 2879841675846384347}
   force: 50
 --- !u!1 &1181416913008777232
 GameObject:
@@ -72,7 +73,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181416913008777232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.8000002, z: 0}
+  m_LocalPosition: {x: 0, y: 1.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -144,6 +145,8 @@ GameObject:
   - component: {fileID: 1181416913837315680}
   - component: {fileID: 1181416913837315681}
   - component: {fileID: 1181416913837315682}
+  - component: {fileID: 2344865402484468180}
+  - component: {fileID: 2879841675846384347}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -255,3 +258,30 @@ MonoBehaviour:
   jumpSpeed: 8
   rotationSpeed: 2
   rotationXLimit: 45
+--- !u!136 &2344865402484468180
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181416913837315683}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.68
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2879841675846384347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181416913837315683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be2a40862cc753245ace6e07d475d172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sac: 1

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8509816854470822274}
   - component: {fileID: 8509816854470822277}
   - component: {fileID: 8509816854470822276}
-  - component: {fileID: 2586208974876124717}
   m_Layer: 0
   m_Name: TreeHPBar
   m_TagString: Untagged
@@ -102,19 +101,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2586208974876124717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4247516479139744194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ebf2723f978b6d4d96a71563cf2a041, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hp: 100
 --- !u!1 &8509816855539026143
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +168,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6bcf7756f4bd379458c2a377e3ef8bec, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1

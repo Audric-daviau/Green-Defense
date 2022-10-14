@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class seedPicker : MonoBehaviour
 {
+    GameObject objectseed;
+    public int sac = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +16,16 @@ public class seedPicker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+ 
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Seed"))
+        {
+            sac++;
+            Debug.Log("j'ai le seed " + sac);
+            Destroy(other.gameObject);
+        }
     }
 }

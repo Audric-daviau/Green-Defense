@@ -127,4 +127,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89bcd10a28426dc41944eacbdef4488f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tree: {fileID: 5056591984241536866, guid: 513141e0f526a8c44a78f7c4d248a3d7, type: 3}
+  tree: {fileID: 100000, guid: 6679a2f90333fd44789a85991f15ddd1, type: 3}
+  _soundEffect: {fileID: 0}

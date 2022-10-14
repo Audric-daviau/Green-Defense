@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyTir : MonoBehaviour
 {
+    public AnimationStateController asc;
     public Transform spawnBullet;
     public GameObject bullet;
     Animator animator;
@@ -20,7 +21,7 @@ public class EnemyTir : MonoBehaviour
     private void FixedUpdate()
     {
         bool isTree = animator.GetBool("isTree");
-        if (isTree)
+        if (asc.getIsPlayer() || isTree)
         {
             timeToShoot -= Time.deltaTime;
 
