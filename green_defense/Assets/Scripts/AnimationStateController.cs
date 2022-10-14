@@ -13,7 +13,6 @@ public class AnimationStateController : MonoBehaviour
     Transform person;
     Animator animator;
     Rigidbody rb;
-    int dommage = 10 ;
 
     private int nbr_convert = 0;
 
