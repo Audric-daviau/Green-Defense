@@ -12,12 +12,16 @@ public class treeDamage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(_detectTrash)
+        {
+            lifeBar.TakeDamage() ;
+        }
+
         if(lifeBar.getHp() == 0){
             Destroy(this.gameObject);
         }
@@ -27,8 +31,6 @@ public class treeDamage : MonoBehaviour
     {
         if (other.CompareTag("Trash"))
         {
-            lifeBar.TakeDamage() ;
-            Debug.Log("Trash detect, getHp() = " + lifeBar.getHp()) ;
             _detectTrash = true;
         }
     }

@@ -8,6 +8,7 @@ public class AnimationStateController : MonoBehaviour
 
     private bool isTreeDetect;
     public float moveSpeed;
+    
     Transform treeTransform;
     Animator animator;
     Rigidbody rb;
