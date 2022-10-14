@@ -9,6 +9,7 @@ TagManager:
   - Terrain
   - HPBar
   - Seed
+  - Trash
   layers:
   - Default
   - TransparentFX
