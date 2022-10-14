@@ -17,7 +17,7 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetButton("Fire2")){
+        if(Input.GetButtonUp("Fire2")){
             if(GameIsPaused)
             {
                 Resume();
