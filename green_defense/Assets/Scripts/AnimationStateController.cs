@@ -92,7 +92,6 @@ public class AnimationStateController : MonoBehaviour
             animator.SetBool("isTree", true);
             transform.position += transform.forward * 0 * Time.deltaTime;
             transform.LookAt(treeTransform);
-            Debug.Log("dans la zone de détection") ;    
             hb.TakeDamage() ; //Inflige des dégats
 
         }
