@@ -20,7 +20,6 @@ public class treeDamage : MonoBehaviour
     {
         if(_detectTrash)
         {
-            Debug.Log("Take dommage") ;
             lifeBar.TakeDamage() ;
         }
 
@@ -42,6 +41,15 @@ public class treeDamage : MonoBehaviour
         if (other.CompareTag("Trash"))
         {
             _detectTrash = true;
+        }
+    }
+
+    
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Trash"))
+        {
+            _detectTrash = false;
         }
     }
 

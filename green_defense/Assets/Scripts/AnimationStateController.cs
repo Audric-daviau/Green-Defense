@@ -5,6 +5,8 @@ using UnityEngine;
 public class AnimationStateController : MonoBehaviour
 {
     public HealthBar hb;
+    public Player player;
+
     private GameObject tds;
     private bool isDestroyed;
     private bool isTreeDetect;
@@ -32,6 +34,7 @@ public class AnimationStateController : MonoBehaviour
     { 
         DetecteZone() ;
         if(hb.getHp() == 0){
+            player.setScore(player.getScore() + 1);
             Destroy(this.gameObject);
         }
         if (tds.GetComponent<treeDamage>().isDestroy)

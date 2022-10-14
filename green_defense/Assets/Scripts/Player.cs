@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Vie Player
-    public int maxHitPoint = 20;
-
-    // Points de Vie actuels
-    public int hitPoint = 0;
+    public HealthBar lifeBar;
+    bool _detectTrash;
 
     //Camera
     public Camera playerCamera;
+
+    // Score
+    private static int score = 0;
  
     //Composant qui permet de faire bouger le joueur
     CharacterController characterController;
@@ -46,8 +46,6 @@ public class Player : MonoBehaviour
         //Cache le curseur de la souris
         Cursor.visible = false;
         characterController = GetComponent<CharacterController>();  
-        //Au début : Points de vie actuels = Maximum de points de vie | NOMBRE DE GRAINES?
-        hitPoint = maxHitPoint;
     }
  
     // Update is called once per frame
@@ -96,9 +94,7 @@ public class Player : MonoBehaviour
             speedX = speedX * walkingSpeed;
             speedZ = speedZ * walkingSpeed;
         }
- 
-         
- 
+  
         //Calcul du mouvement
         //forward = axe arrière/avant
         //right = axe gauche/droite
@@ -111,11 +107,10 @@ public class Player : MonoBehaviour
  
             moveDirection.y = jumpSpeed;
         }
-      else
+        else
         {
             moveDirection.y = speedY;
         }
- 
  
         //Si le joueur ne touche pas le sol
         if (!characterController.isGrounded)
@@ -125,11 +120,8 @@ public class Player : MonoBehaviour
             moveDirection.y -= gravity * Time.deltaTime;
         }
  
- 
         //Applique le mouvement
         characterController.Move(moveDirection * Time.deltaTime);
- 
- 
  
         //Rotation de la caméra
  
@@ -150,5 +142,39 @@ public class Player : MonoBehaviour
         //Input.GetAxis("Mouse X") = mouvement de la souris gauche/droite
         //Applique la rotation gauche/droite sur le Player
         transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * rotationSpeed, 0);
+
+        if(_detectTrash)
+        {
+            lifeBar.TakeDamage() ;
+        }
+        if(lifeBar.getHp() == 0){
+            Destroy(this.gameObject);
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Trash"))
+        {
+            _detectTrash = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Trash"))
+        {
+            _detectTrash = false;
+        }
+    }
+
+    public void setScore(int sc)
+    {
+        score = sc;
+    }
+
+    public int getScore()
+    {
+        return score;
     }
 }
