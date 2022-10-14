@@ -1414,7 +1414,7 @@ GameObject:
   - component: {fileID: -8124531928062518929}
   - component: {fileID: 5931831254816754305}
   m_Layer: 0
-  m_Name: Female 4
+  m_Name: rf4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1291,7 +1291,7 @@ GameObject:
   - component: {fileID: 4198106629841922017}
   - component: {fileID: -2303016865797134354}
   m_Layer: 0
-  m_Name: Female 3
+  m_Name: rf3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

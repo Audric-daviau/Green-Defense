@@ -10,6 +10,7 @@ public class AnimationStateController : MonoBehaviour
     private bool isPlayer;
     public float moveSpeed;
     Transform treeTransform;
+    Transform person;
     Animator animator;
     Rigidbody rb;
     int dommage = 10 ;
@@ -40,24 +41,29 @@ public class AnimationStateController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayer = true;
+            person = other.transform;
         }
 
         else if (other.CompareTag("Tree")){
             isTreeDetect = true;
             treeTransform = other.transform;
         }
-        else
-        {
-            isPlayer = false;
-            isTreeDetect = false;
-        }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Tree")){
+        if (other.CompareTag("Tree"))
+        {
             isTreeDetect = false;
+            transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
+
+        else if (other.CompareTag("Player"))
+        {
+            isPlayer = false;
+            transform.position += transform.forward * moveSpeed * Time.deltaTime;
+        }
+
     }
 
     void DetecteZone() //Détecte si les personnages rentre dans la zone de converssion de l'arbre
@@ -67,24 +73,29 @@ public class AnimationStateController : MonoBehaviour
         {
             animator.SetBool("isTree", true);
             transform.position += transform.forward * 0 * Time.deltaTime;
-            transform.LookAt(treeTransform);
+            transform.LookAt(person);
+            if (isTreeDetect)
+            {
+                hb.TakeDamage(); //Inflige des dégats
+            }
         }
-
-        if (isTreeDetect)
+        else if (isTreeDetect)
         {
             animator.SetBool("isTree", true);
             transform.position += transform.forward * 0 * Time.deltaTime;
             transform.LookAt(treeTransform);
             Debug.Log("dans la zone de détection") ;    
-            hb.TakeDamage() ; //Inflige des dégats 
+            hb.TakeDamage() ; //Inflige des dégats
 
         }
-
-        if (!isTreeDetect && !isPlayer)
+        else
         {
             animator.SetBool("isTree", false);
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
         }
+
+            
+        
     }
 
 }

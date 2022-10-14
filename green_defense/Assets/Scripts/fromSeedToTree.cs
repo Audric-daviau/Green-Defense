@@ -5,11 +5,12 @@ using UnityEngine;
 public class fromSeedToTree : MonoBehaviour
 {
     public GameObject tree;
+    private AudioSource _soundEffect;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _soundEffect = tree.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class fromSeedToTree : MonoBehaviour
         {
             var t = GameObject.Instantiate(tree);
             t.transform.position = transform.position;
+            _soundEffect.Play();
         }
     }
     void OnTriggerExit(Collider other)
