@@ -15,9 +15,16 @@ public class AnimationStateController : MonoBehaviour
     Rigidbody rb;
     int dommage = 10 ;
 
+    private int nbr_convert = 0;
+
     public bool getIsPlayer()
     {
         return isPlayer;
+    }
+
+    public int getNrb_convert()
+    {
+        return nbr_convert;
     }
 
     // Start is called before the first frame update
@@ -32,6 +39,7 @@ public class AnimationStateController : MonoBehaviour
     { 
         DetecteZone() ;
         if(hb.getHp() == 0){
+            nbr_convert++;
             Destroy(this.gameObject);
         }
     }
