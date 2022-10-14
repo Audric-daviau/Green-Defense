@@ -15,8 +15,8 @@ public class Script_arbres_actifs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int nbr_abr = Arbre_vivant();
-        self.text = (nbr_abr == 1) ? "Arbre Vivant: " + nbr_abr : "Arbres Vivants: " + nbr_abr;
+        int nbr_abr = Arbre_vivant() -1;
+        self.text = (nbr_abr <= 1) ? "Arbre Vivant: " + nbr_abr : "Arbres Vivants: " + nbr_abr;
 
     }
 }
