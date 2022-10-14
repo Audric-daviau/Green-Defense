@@ -29,7 +29,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7706473263717844791}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7706473263718013601
 GameObject:
@@ -1519,7 +1519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e54d08d259d6b34e80a8129206252d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hb: {fileID: 6074396447961386494}
+  lifeBar: {fileID: 6074396447961386494}
   moveSpeed: 2
 --- !u!114 &5931831254816754305
 MonoBehaviour:
@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnBullet: {fileID: 5697324068513324679}
-  bullet: {fileID: 6918467608218448975, guid: 34b748d53ba61cd4283a06d177f2e536, type: 3}
+  bullet: {fileID: 4115989556732079227, guid: 7271c62891c2e214089399af51532907, type: 3}
   shootSpeed: 7.9
   timeToShoot: 0.75
 --- !u!1 &7706473263718013721

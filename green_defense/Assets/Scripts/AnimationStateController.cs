@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class AnimationStateController : MonoBehaviour
 {
-    public HealthBar hb;
+    public HealthBar lifeBar;
 
     private bool isTreeDetect;
     public float moveSpeed;
     Transform treeTransform;
     Animator animator;
     Rigidbody rb;
-    int dommage = 10 ;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +23,7 @@ public class AnimationStateController : MonoBehaviour
     void Update()
     { 
         DetecteZone() ;
-        if(hb.getHp() == 0){
+        if(lifeBar.getHp() == 0){
             Destroy(this.gameObject);
         }
     }
@@ -52,8 +51,7 @@ public class AnimationStateController : MonoBehaviour
             animator.SetBool("isTree", true);
             transform.position += transform.forward * 0 * Time.deltaTime;
             transform.LookAt(treeTransform);
-            Debug.Log("dans la zone de détection") ;    
-            hb.TakeDamage() ; //Inflige des dégats 
+            lifeBar.TakeDamage() ; //Inflige des dégats 
 
         }
 

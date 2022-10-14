@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class treeDamage : MonoBehaviour
 {
-    bool isEnemy;
+    public HealthBar lifeBar;
+
+    bool _detectTrash;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,16 +18,18 @@ public class treeDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isEnemy)
-        {
-            //Todo
+        if(lifeBar.getHp() == 0){
+            Destroy(this.gameObject);
         }
     }
+
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Trash"))
         {
-            isEnemy = true;
+            lifeBar.TakeDamage() ;
+            Debug.Log("Trash detect, getHp() = " + lifeBar.getHp()) ;
+            _detectTrash = true;
         }
     }
 
